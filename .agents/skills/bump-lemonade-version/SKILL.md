@@ -7,7 +7,7 @@ description: "Methodical workflow to upgrade the Lemonade RPM packages for a new
 
 Use this skill when you need to bump the packaged version of upstream Lemonade in the `lemonade-rpm` repository.
 
-Always refer to [AGENTS.md](file:///home/abn/workspace/lemonade-sdk/lemonade-rpm/AGENTS.md) for repository architecture, rules, and invariants.
+Always refer to [AGENTS.md](../../../AGENTS.md) for repository architecture, rules, and invariants.
 
 ---
 
@@ -38,7 +38,7 @@ git -C lemonade diff --name-only vPREV..vNEW
 
 ## 2. Update Spec Version
 
-1. Open [lemonade.spec](file:///home/abn/workspace/lemonade-sdk/lemonade-rpm/lemonade.spec).
+1. Open [lemonade.spec](../../../lemonade.spec).
 2. Modify the `Version:` field at the top of the file:
    ```spec
    Version:        X.Y.Z
@@ -121,7 +121,7 @@ If a patch check fails (`git apply --check` returns errors):
 If the build fails inside `rpmbuilder` because of a missing header or library (e.g. `fatal error: header.h: No such file or directory` or `cannot find -llibname`):
 1. Do **NOT** manually install the package inside the container using `dnf`. This violates the reproducibility of packaging.
 2. Determine which Fedora package provides the missing file using your package manager or web search.
-3. Add the package to the `BuildRequires:` (or `Requires:`) section of [lemonade.spec](file:///home/abn/workspace/lemonade-sdk/lemonade-rpm/lemonade.spec).
+3. Add the package to the `BuildRequires:` (or `Requires:`) section of [lemonade.spec](../../../lemonade.spec).
 4. Commit the spec file modification to Git and rerun the container build.
 
 ### Error: Tito "dirty repository" state during tagging
