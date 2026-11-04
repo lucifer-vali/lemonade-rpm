@@ -1,6 +1,6 @@
 # lemonade-rpm
 
-[![Copr Build Status](https://copr.fedorainfracloud.org/coprs/abn/lemonade/package/lemonade/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/abn/lemonade/)
+[![Copr Build Status](https://copr.fedorainfracloud.org/coprs/g/lemonade-server/lemonade/package/lemonade/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/g/lemonade-server/lemonade/)
 
 Fedora RPM packages for [Lemonade](https://github.com/lemonade-sdk/lemonade), a lightweight, high-performance local LLM server.
 
@@ -8,7 +8,7 @@ The source is integrated via git submodules from [lemonade-sdk/lemonade](https:/
 
 ## Installation
 
-This package is available via the [abn/lemonade](https://copr.fedorainfracloud.org/coprs/abn/lemonade/) Copr repository.
+This package is available via the [@lemonade-server/lemonade](https://copr.fedorainfracloud.org/coprs/g/lemonade-server/lemonade/) Copr repository.
 
 ### Quick Start (Full Installation)
 
@@ -16,7 +16,7 @@ To install both the server and the desktop application:
 
 ```bash
 # Enable the Copr repository
-sudo dnf copr enable abn/lemonade
+sudo dnf copr enable @lemonade-server/lemonade
 
 # Install everything
 sudo dnf install lemonade
